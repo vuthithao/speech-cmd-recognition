@@ -33,6 +33,7 @@ The Demo notebook is preconfigured with a set of tasks: ```['12cmd', 'leftright'
            'visual', 'wow']
 
 Confuse matrix of 35word task:
+
 ![cf](result.png)
 
 ## Cloning this repository
