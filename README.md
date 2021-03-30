@@ -26,6 +26,15 @@ The Demo notebook is preconfigured with a set of tasks: ```['12cmd', 'leftright'
 If you want a pretrained model, `model-attRNN.h5` contains pre-trained weights for task 35word, version=2.
 
 ## Cloning this repository
+- 35word task's classes:
+    ``````
+    #35word, v2
+    classes = ['nine', 'yes', 'no', 'up', 'down', 'left', 'right', 'on', 'off', 'stop', 'go',
+           'zero', 'one', 'two', 'three', 'four', 'five', 'six', 
+           'seven',  'eight', 'backward', 'bed', 'bird', 'cat', 'dog',
+           'follow', 'forward', 'happy', 'house', 'learn', 'marvin', 'sheila', 'tree',
+           'visual', 'wow']
+
 - Test trained model for task 35word:
   ``````
     python infer.py --record 1 #if you want to record your voice for testing
@@ -39,6 +48,10 @@ If you want a pretrained model, `model-attRNN.h5` contains pre-trained weights f
   ``````
     python infer_tflite.py --record 1 #if you want to record your voice for testing
     python infer_tflite.py --audio a.wav #if you want to test audio file
+
+### Test by [colab](https://drive.google.com/drive/folders/12yiH4c38uQA33wth9_EVLwXxJt_ZTX8J?usp=sharing)
+
+    open and run [infer.ipynb](https://colab.research.google.com/drive/1YdcZIj3plQs7aF-bJ8rT_i43d7zHfVQm?usp=sharing)
   
 ## Train with your own data
 
