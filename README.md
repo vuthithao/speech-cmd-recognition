@@ -51,7 +51,7 @@ If you want a pretrained model, `model-attRNN.h5` contains pre-trained weights f
 
 ### Test by [colab](https://drive.google.com/drive/folders/12yiH4c38uQA33wth9_EVLwXxJt_ZTX8J?usp=sharing)
 
-    open and run [infer.ipynb](https://colab.research.google.com/drive/1YdcZIj3plQs7aF-bJ8rT_i43d7zHfVQm?usp=sharing)
+open and run [infer.ipynb](https://colab.research.google.com/drive/1YdcZIj3plQs7aF-bJ8rT_i43d7zHfVQm?usp=sharing)
   
 ## Train with your own data
 
