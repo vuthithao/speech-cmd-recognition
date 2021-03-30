@@ -23,9 +23,6 @@ The Demo notebook is preconfigured with a set of tasks: ```['12cmd', 'leftright'
 
 ```gscInfo, nCategs = SpeechDownloader.PrepareGoogleSpeechCmd(version=1, task = '35word')```
 
-If you want a pretrained model, `model-attRNN.h5` contains pre-trained weights for task 35word, version=2.
-
-## Cloning this repository
 - 35word task's classes:
     ``````
     #35word, v2
@@ -34,6 +31,10 @@ If you want a pretrained model, `model-attRNN.h5` contains pre-trained weights f
            'seven',  'eight', 'backward', 'bed', 'bird', 'cat', 'dog',
            'follow', 'forward', 'happy', 'house', 'learn', 'marvin', 'sheila', 'tree',
            'visual', 'wow']
+- Confuse matrix of 35word task:
+![cf](result.png)
+
+## Cloning this repository
 
 - Test trained model for task 35word:
   ``````
