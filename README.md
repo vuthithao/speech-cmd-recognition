@@ -23,15 +23,16 @@ The Demo notebook is preconfigured with a set of tasks: ```['12cmd', 'leftright'
 
 ```gscInfo, nCategs = SpeechDownloader.PrepareGoogleSpeechCmd(version=1, task = '35word')```
 
-- 35word task's classes:
-    ``````
+35word task's classes:
+
     #35word, v2
     classes = ['nine', 'yes', 'no', 'up', 'down', 'left', 'right', 'on', 'off', 'stop', 'go',
            'zero', 'one', 'two', 'three', 'four', 'five', 'six', 
            'seven',  'eight', 'backward', 'bed', 'bird', 'cat', 'dog',
            'follow', 'forward', 'happy', 'house', 'learn', 'marvin', 'sheila', 'tree',
            'visual', 'wow']
-- Confuse matrix of 35word task:
+
+Confuse matrix of 35word task:
 ![cf](result.png)
 
 ## Cloning this repository
