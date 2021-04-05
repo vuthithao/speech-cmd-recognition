@@ -23,17 +23,15 @@ The Demo notebook is preconfigured with a set of tasks: ```['12cmd', 'leftright'
 
 ```gscInfo, nCategs = SpeechDownloader.PrepareGoogleSpeechCmd(version=1, task = '35word')```
 
-35word task's classes:
-
+- 35word task's classes:
+    ``````
     #35word, v2
     classes = ['nine', 'yes', 'no', 'up', 'down', 'left', 'right', 'on', 'off', 'stop', 'go',
            'zero', 'one', 'two', 'three', 'four', 'five', 'six', 
            'seven',  'eight', 'backward', 'bed', 'bird', 'cat', 'dog',
            'follow', 'forward', 'happy', 'house', 'learn', 'marvin', 'sheila', 'tree',
            'visual', 'wow']
-
-Confuse matrix of 35word task:
-
+- Confuse matrix of 35word task:
 ![cf](result.png)
 
 ## Cloning this repository
@@ -58,12 +56,35 @@ open and run [infer.ipynb](https://colab.research.google.com/drive/1YdcZIj3plQs7
   
 ## Train with your own data
 
-If you want to train with your own data:
+1. Generate data by text to speech + star GAN
 
-- Use the ```audioUtily.py WAV2Numpy``` function to save your WAV files in numpy format. This speeds up loading considerably;
-- Create a ```list_IDs``` array containing the paths to all the numpy files and a ```labels``` array with corresponding labels (already converted to integers);
-- Instantiate a ```SpeechGenerator.py SpeechGen``` class;
-- Create your own Keras model for audio classification or use one provided in ```SpeechModels.py```;
-- Train the model.
+1.1. Text to speech
+
+   Check file `gen_data.py` and change text you want to generate
+```
+python gen_data.py
+```
+1.2. Use Star-GAN model to convert to 9 others voice
+  Please check file `data4cmd.py` in [stargan-voice-conversion](http://gitlab.giaingay.io/vuthithao/stargan-voice-conversion)
+  Run
+```
+python data4cmd.py
+```
+
+1.3. Train, test, val split
+```
+python traintestsplit.py
+```
+
+1.4. Config your cmd categories in file `SpeechPrepare.py`
+
+1.5. Train
+```
+python train_custom.py
+```
+1.6. Test
+```
+python infer_custom.py --record 1
+```
 
 Thanks for: [douglas125](https://github.com/douglas125/SpeechCmdRecognition)
